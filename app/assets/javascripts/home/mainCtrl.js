@@ -3,18 +3,21 @@ angular.module('flapperNews')
 	'$scope',
 	'posts',
 	function($scope, posts){
+
+		resolve: {
+			postPromise: ['posts', function(posts){
+				return posts.getAll();
+			}]
+		};
+
 		$scope.posts = posts.posts;
 		
 		$scope.addPost = function() {
 			if (!$scope.title || $scope.title === '') { return;}
-			$scope.posts.push({
+			posts.create({
 				title: $scope.title,
 				link: $scope.link,
-				upvotes: 0,
-				comments: [
-					{author: 'Joe', body: 'Cool post!', upvotes:0},
-					{author: 'JimBob', body: 'Its all great but very wrong!', upvotes:0}
-				]
+				
 			});
 			$scope.title = '';
 			$scope.link = '';

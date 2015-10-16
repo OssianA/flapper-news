@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'angular_rails_csrf'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #compiles html templates to js fpr angular
 gem 'angular-rails-templates', '0.2.0'
 gem 'sprockets', '2.12.3'
+
+gem 'responders'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
