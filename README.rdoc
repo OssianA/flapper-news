@@ -4,14 +4,13 @@ This is a excercise for creating an reddit clone with a angular + rails backend 
 
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 4.2.0
 
-* System dependencies
+* Specified in gemfile, sprockets and angular-rail-templates dont work well, need tinkering.
 
 * Configuration
 
