@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  root to: 'application#angular'
+  devise_for :users
+  root 'application#angular'
   
   resources :posts, only: [:create, :index, :show] do
     resources :comments, only: [:show, :create] do
