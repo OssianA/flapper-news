@@ -3,14 +3,14 @@ angular.module('flapperNews')
 	'$http',
 	function($http){
 	var o = {
-		posts: [{title:"Wazzappp", upvotes:12}]
+		posts: []
 	};
 	o.getAll = function() {
 		return $http.get('/posts.json').success(function(data){
 			angular.copy(data, o.posts);
 		});
 	};
-	o.create = function() {
+	o.create = function(post) {
 		return $http.post('/posts.json', post).success(function(data){
 			o.posts.push(data);
 		});
